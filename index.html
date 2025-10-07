@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyAdventure - Aventuras en el Cielo</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar fija -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <i class="fas fa-parachute-box me-2"></i>SkyAdventure
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tours">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <section id="inicio">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-block w-100 bg-primary" style="height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                        <h1 class="display-4 fw-bold mb-3">Vive la Aventura de tu Vida</h1>
+                        <p class="lead mb-4">Descubre el mundo desde las alturas con nuestras increíbles experiencias de paracaidismo y vuelo</p>
+                        <button class="btn btn-warning btn-lg px-5" data-bs-toggle="modal" data-bs-target="#reservaModal">
+                            <i class="fas fa-calendar-check me-2"></i>Reservar Ahora
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block w-100 bg-success" style="height: 100vh; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);"></div>
+                    <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                        <h1 class="display-4 fw-bold mb-3">Experiencias Únicas</h1>
+                        <p class="lead mb-4">Desde paracaidismo hasta vuelos en parapente, tenemos la aventura perfecta para ti</p>
+                        <button class="btn btn-warning btn-lg px-5" data-bs-toggle="modal" data-bs-target="#reservaModal">
+                            <i class="fas fa-rocket me-2"></i>Reservar Ahora
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block w-100 bg-info" style="height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                        <h1 class="display-4 fw-bold mb-3">Seguridad Garantizada</h1>
+                        <p class="lead mb-4">Instructores certificados y equipos de última generación para tu tranquilidad</p>
+                        <button class="btn btn-warning btn-lg px-5" data-bs-toggle="modal" data-bs-target="#reservaModal">
+                            <i class="fas fa-shield-alt me-2"></i>Reservar Ahora
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Modal de Reserva -->
+    <div class="modal fade" id="reservaModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">
+                        <i class="fas fa-calendar-check me-2"></i>Reservar Aventura
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nombreReserva" class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control" id="nombreReserva" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="emailReserva" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="emailReserva" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="telefonoReserva" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefonoReserva" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="fechaReserva" class="form-label">Fecha Preferida</label>
+                                <input type="date" class="form-control" id="fechaReserva" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tourReserva" class="form-label">Tipo de Aventura</label>
+                            <select class="form-select" id="tourReserva" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="paracaidismo">Paracaidismo Tándem</option>
+                                <option value="parapente">Vuelo en Parapente</option>
+                                <option value="ala-delta">Ala Delta</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="participantesReserva" class="form-label">Número de Participantes</label>
+                            <input type="number" class="form-control" id="participantesReserva" min="1" max="10" value="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="comentariosReserva" class="form-label">Comentarios Adicionales</label>
+                            <textarea class="form-control" id="comentariosReserva" rows="3" placeholder="Cuéntanos sobre tus expectativas o necesidades especiales..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-paper-plane me-2"></i>Enviar Reserva
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Tours -->
+    <section id="tours" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Nuestros Tours</h2>
+                    <p class="lead">Descubre las mejores aventuras aéreas que tenemos para ti</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card tour-card h-100">
+                        <div class="card-img-top bg-primary d-flex align-items-center justify-content-center" style="height: 250px;">
+                            <i class="fas fa-parachute-box text-white" style="font-size: 4rem;"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paracaidismo Tándem</h5>
+                            <p class="card-text">Experimenta la emoción de saltar desde 4,000 metros de altura con un instructor certificado. La experiencia perfecta para principiantes.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Incluye equipo completo</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Instructor certificado</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Certificado de participación</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#reservaModal">
+                                <i class="fas fa-calendar-plus me-2"></i>Reservar Ahora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card tour-card h-100">
+                        <div class="card-img-top bg-success d-flex align-items-center justify-content-center" style="height: 250px;">
+                            <i class="fas fa-wind text-white" style="font-size: 4rem;"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Vuelo en Parapente</h5>
+                            <p class="card-text">Disfruta de un vuelo tranquilo y relajante sobre paisajes impresionantes. Perfecto para quienes buscan una experiencia más suave.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Vuelo de 20-30 minutos</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Vista panorámica</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Fotos incluidas</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#reservaModal">
+                                <i class="fas fa-calendar-plus me-2"></i>Reservar Ahora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card tour-card h-100">
+                        <div class="card-img-top bg-info d-flex align-items-center justify-content-center" style="height: 250px;">
+                            <i class="fas fa-plane text-white" style="font-size: 4rem;"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Ala Delta</h5>
+                            <p class="card-text">Vuela como un pájaro con nuestro curso de ala delta. Aprende las técnicas básicas y disfruta de la libertad del vuelo libre.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Curso básico incluido</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Equipo profesional</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Instructor experimentado</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button class="btn btn-info w-100" data-bs-toggle="modal" data-bs-target="#reservaModal">
+                                <i class="fas fa-calendar-plus me-2"></i>Reservar Ahora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Preguntas Frecuentes</h2>
+                    <p class="lead">Resolvemos las dudas más comunes sobre nuestras aventuras</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                    <i class="fas fa-question-circle me-2"></i>¿Es seguro el paracaidismo?
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>¡Absolutamente seguro!</strong> Utilizamos equipos de última generación que se revisan constantemente. Todos nuestros instructores están certificados internacionalmente y tienen años de experiencia. Además, realizamos un briefing completo antes de cada salto para explicar todas las medidas de seguridad.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                    <i class="fas fa-question-circle me-2"></i>¿Qué requisitos debo cumplir para participar?
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Los requisitos básicos son: tener entre 18 y 65 años, pesar entre 45 y 100 kg, no tener problemas cardíacos graves, no estar embarazada y firmar un formulario de salud. Si tienes alguna condición médica especial, consulta con tu médico antes de reservar.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                    <i class="fas fa-question-circle me-2"></i>¿Qué incluye el precio de la experiencia?
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    El precio incluye: todo el equipo necesario (paracaídas, arnés, casco), instructor certificado, briefing de seguridad, el vuelo en avión hasta la altura de salto, el salto en tándem, y un certificado de participación. También ofrecemos paquetes con fotos y videos profesionales.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                    <i class="fas fa-question-circle me-2"></i>¿Qué pasa si el clima no es favorable?
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    La seguridad es nuestra prioridad. Si las condiciones climáticas no son adecuadas (viento fuerte, lluvia, nubes bajas), reprogramaremos tu salto sin costo adicional. Te contactaremos con al menos 2 horas de anticipación para coordinar una nueva fecha.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                    <i class="fas fa-question-circle me-2"></i>¿Puedo cancelar o reprogramar mi reserva?
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, puedes cancelar o reprogramar tu reserva hasta 48 horas antes de la fecha programada sin penalización. Si cancelas con menos de 48 horas, se aplicará un cargo del 50%. En caso de emergencia médica, haremos excepciones.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Contáctanos</h2>
+                    <p class="lead">¿Tienes alguna pregunta? Estamos aquí para ayudarte</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <form id="contactForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Nombre Completo *</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                    <div class="invalid-feedback" id="nameError" style="display: none;"></div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Correo Electrónico *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback" id="emailError" style="display: none;"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Asunto</label>
+                                <select class="form-select" id="subject">
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="reserva">Consulta sobre Reservas</option>
+                                    <option value="info">Información General</option>
+                                    <option value="grupos">Grupos y Eventos</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje *</label>
+                                <textarea class="form-control" id="message" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                                <div class="invalid-feedback" id="messageError" style="display: none;"></div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="newsletter">
+                                <label class="form-check-label" for="newsletter">
+                                    Quiero recibir información sobre nuevas aventuras y promociones
+                                </label>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg px-5">
+                                    <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h5><i class="fas fa-parachute-box me-2"></i>SkyAdventure</h5>
+                    <p class="mb-3">Vive la aventura de tu vida con las mejores experiencias aéreas. Seguridad, profesionalismo y diversión garantizada.</p>
+                    <div class="social-links">
+                        <a href="#" data-bs-toggle="tooltip" title="Facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="Instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="Twitter" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="YouTube" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="WhatsApp" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h6>Enlaces Rápidos</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" class="text-light">Inicio</a></li>
+                        <li><a href="#tours" class="text-light">Tours</a></li>
+                        <li><a href="#faq" class="text-light">FAQ</a></li>
+                        <li><a href="#contacto" class="text-light">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6>Información de Contacto</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i>info@skyadventure.com</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Av. Aventura 123, Ciudad</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 SkyAdventure. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">Política de Privacidad</a>
+                    <a href="#" class="text-light">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
